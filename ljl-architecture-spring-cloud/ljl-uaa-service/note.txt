@@ -1,0 +1,3 @@
+keytool -genkeypair -alias ljl-jwt -validity 3650 -keyalg RSA -dname "CN=ljl,OU=ljl,O=ljl,L=Foshan,S=Guangdong,C=CN" -keypass ljl123 -keystore ljl-jwt.jks -storepass ljl123
+
+keytool -list -rfc --keystore ljl-jwt.jks | openssl x509 -inform pem -pubkey
